@@ -1,5 +1,5 @@
 <div>
-<p align="center"><img src="./img/salerno.png" title="capa" alt="capa" width=auto height=250px /></p>
+<p align="center"><img src="./mgt/img/salerno.png" title="capa" alt="capa" width=auto height=250px /></p>
 </div>
 
 <div>
