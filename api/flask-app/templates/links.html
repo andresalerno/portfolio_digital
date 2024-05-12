@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{{ super() }}
+  <style type="text/css">
+    main { 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1.2rem 3rem;
+        color: orange;
+    }
+
+  </style>
+{% endblock head %}
+
+
+{% block content %}
+<main>
+  <div class="container-fluid">
+    <h1>Links</h1>
+  </div>
+    <div class="container" style="color: rgb(226, 127, 38);">
+        <form>
+            <h1>Faça parte da nossa comunidade de profissionais focados em finanças e tecnologia</h1>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="d-flex">
+                <button type="submit" class="btn btn-primary" style="float: right">Enviar</button>
+            </div>
+
+          </form>
+    </div>
+
+
+    <div class="container-fluid" style="text-align: center; margin-top:50px;">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <a href="https://www.linkedin.com/in/andresalerno/" target="_blank">
+                        <i class="fab fa-linkedin fa-5x" style="color: rgb(10, 102, 194)"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/datafintechsolutions/" style="color: orange;">Company LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <a href="https://www.datafintechsolutions.com" target="_blank">
+                        <i class="fa-sharp fa-solid fa-globe fa-5x" style="color: orange"></i>
+                    </a>
+                    <a href="https://www.datafintechsolutions.com" style="color: orange;">Website</a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <a href="mailto:salerno@datafintechsolutions.com" target="_blank">
+                        <i class="fa fa-envelope fa-5x" style="color: orange"></i>
+                    </a>
+                    <a href="https://www.datafintechsolutions.com" style="color: orange;">Email</a>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card">
+                    <a href="https://www.instagram.com/datafintechsolutions/" target="_blank">
+                        <i class="fab fa-instagram fa-5x" style="color: rgb(191, 0, 137)"></i>
+                    </a>
+                    <a href="https://www.instagram.com/datafintechsolutions/" style="color: orange;">Instagram</a>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </div>
+
+
+    
+
+<!-- 
+    <div class="row">
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+        <div class="col-sm-3">.col-sm-3</div>
+      </div>
+
+    <div class="container p-3 my-3 border"></div>
+
+<div class="container p-3 my-3 bg-dark text-white"></div>
+
+<div class="container p-3 my-3 bg-primary text-white"></div>
+      <div>
+        <title>TTTTTT</title>
+      </div>
+    <div class="d-flex flex-column">
+        <div class="p-2">Flex item 1</div>
+        <div class="p-2">Flex item 2</div>
+        <div class="p-2">Flex item 3</div>
+      </div>
+
+    <ul class="container-fluid list-unstyled">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Integer molestie lorem at massa</li>
+        <li>Facilisis in pretium nisl aliquet</li>
+        <li>Nulla volutpat aliquam velit
+          <ul>
+            <li>Phasellus iaculis neque</li>
+            <li>Purus sodales ultricies</li>
+            <li>Vestibulum laoreet porttitor sem</li>
+            <li>Ac tristique libero volutpat at</li>
+          </ul>
+        </li>
+        <li>Faucibus porta lacus fringilla vel</li>
+        <li>Aenean sit amet erat nunc</li>
+        <li>Eget porttitor lorem</li>
+      </ul>
+
+    <div class="container-fluid ">
+        <div class="row">
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+          <div class="col-sm">
+            One of three columns
+          </div>
+        </div>
+      </div> -->
+
+</main>
+
+
+       <!-- <div class="container-fluid">
+            <ul class="list-group" style="color: orange;">
+                <li style="color: orange;">
+                    <a href="https://www.linkedin.com/in/andresalerno/" target="_blank">
+                        <i class="fab fa-linkedin" style="color: orange"></i>
+                    </a>
+                </li>
+            </ul>
+        </div> -->
+        
+{% endblock content %}

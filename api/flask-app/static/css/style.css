@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Mono');
+
+/* Pages title */
+
+div > h1 {
+  color: rgb(226, 127, 38);
+}
+
+/* Footer */
+
+
+/* Body */
+
+body {
+
+  background-image: url('./../img/data_fintech_solutions_fundo.png');
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: Ubuntu;
+
+}
+
+/* Cards */
+
+.cardgrid {
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  grid-auto-columns: 3.25rem;
+  gap: 1.0rem;
+  width: 90%;
+  text-align: center;
+  
+}
+
+.card {
+  /* background-color: white; */
+  box-shadow: 5px 5px 10px rgba(30, 30, 30, 0.413);
+  height: auto;
+  border-radius: 10px;
+  border-color: rgb(226, 127, 38);
+  padding: 3.1rem;
+  background: rgb(10, 28, 41);
+  margin: 0.5rem;
+  color: white;
+  /* background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,64,23,1) 35%); */
+}
+/* body {  
+  background: linear-gradient(45deg, #57003f 0%,#f57453 100%); 
+  font-family: Ubuntu;
+}  */
+
+.filter-orange{
+  filter: invert(54%) sepia(71%) saturate(537%) hue-rotate(345deg) brightness(91%) contrast(94%);
+}
+
+
+#container {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  height: 100vh;
+} 
+#terminal {  
+  width: 60vw;  
+  height: 45vh;  
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+} 
+#terminal__bar {  
+  display: flex;  
+  width: 100%;  
+  height: 30px;  
+  align-items: center;  
+  padding: 0 8px;  
+  box-sizing: border-box;  
+  border-top-left-radius: 5px;  
+  border-top-right-radius: 5px;  
+  background: linear-gradient(#504b45 0%,#3c3b37 100%);
+} 
+#bar__buttons {  
+  display: flex;  
+  align-items: center;
+} 
+.bar__button {  
+  display: flex;  
+  justify-content: center;  
+  align-items: center;  
+  padding: 0;  
+  margin-right: 5px;  
+  font-size: 8px;  
+  height: 12px;  
+  width: 12px;  
+  box-sizing: border-box;  
+  border: none;  
+  border-radius: 100%;  
+  background: linear-gradient(#7d7871 0%, #595953 100%);  
+  text-shadow: 0px 1px 0px rgba(255,255,255,0.2);  
+  box-shadow: 0px 0px 1px 0px #41403A, 0px 1px 1px 0px #474642;
+}
+.bar__button:hover {  
+  cursor: pointer;
+}
+.bar__button:focus {  
+  outline: none;
+}
+#bar__button--exit {  
+  background: linear-gradient(#f37458 0%, #de4c12 100%);    
+  background-clip: padding-box;
+} 
+#bar__user {   
+  color: #d5d0ce;
+  padding-top: 15px;
+  margin-left: 10px;  
+  font-size: 14px;  
+  line-height: 15px;
+} 
+#terminal__body {  
+  background: rgba(56, 4, 40, 0.9);  
+  font-family: 'Ubuntu Mono';  
+  height: calc(100% - 30px);  
+  padding-top: 2px;  
+  margin-top: -1px;
+} 
+#terminal__prompt {  
+  display: flex;
+}
+#terminal__prompt--user {  
+  color: #7eda28;
+}
+#terminal__prompt--location { 
+  color: #4878c0;
+}
+#terminal__prompt--bling {  
+  color: #dddddd;
+}
+#terminal__prompt--cursor {  
+  display: block;  
+  height: 17px;  
+  width: 8px;  
+  margin-left: 9px;  
+  animation: blink 1200ms linear infinite;
+} 
+@keyframes blink {  
+  0% {    
+    background: #ffffff;  
+  }  
+  49% {    
+    background: #ffffff;  
+  }  
+  60% {    
+    background: transparent;  
+  }  
+  99% {    
+    background: transparent;  
+  }  100% {    
+    background: #ffffff;  
+  }
+} 
+@media (max-width: 400px) {  
+  #terminal {    
+    max-height: 90%;    
+    width: 60%;  
+  }
+}
+
+/* My image */
+
+#img_my{
+  width:350px;
+  height:500px;
+  padding-top: 30px;
+  border-radius: 50%;
+  /* padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px; */
+}
+
+
+
+
+.typewriter {
+    padding-right: 5px;
+    color: #fff;
+    font-family: Ubuntu;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid rgb(226, 127, 38); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 15 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation:
+      typing 10s steps(40, end) infinite;
+      blink-caret 1s step-end infinite;
+      
+
+}
+
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 90% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(226, 127, 38) }
+  }
+
+
+
+/* Logo */
+
+.logo > a {
+    padding-left: 5%;
+    display: flex;
+    align-items: left;
+    gap: 7px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Navbar */
+
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height as needed */
+    background-color: rgb(226, 127, 38);
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Profissao */
+
+body {
+  margin-top: 20px;
+}
+.timeline_area {
+  position: relative;
+  z-index: 1;
+  color: rgb(226, 127, 38);
+}
+.single-timeline-area {
+  position: relative;
+  z-index: 1;
+  padding-left: 180px;
+}
+@media only screen and (max-width: 575px) {
+  .single-timeline-area {
+      padding-left: 100px;
+  }
+}
+.single-timeline-area .timeline-date {
+  position: absolute;
+  width: 180px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding-right: 60px;
+}
+@media only screen and (max-width: 575px) {
+  .single-timeline-area .timeline-date {
+      width: 100px;
+  }
+}
+.single-timeline-area .timeline-date::after {
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background-color: #ebebeb;
+  top: 0;
+  right: 30px;
+  z-index: 1;
+}
+.single-timeline-area .timeline-date::before {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: rgb(226, 127, 38);
+  content: "";
+  top: 50%;
+  right: 26px;
+  z-index: 5;
+  margin-top: -5.5px;
+}
+.single-timeline-area .timeline-date p {
+  margin-bottom: 0;
+  color: #020710;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.single-timeline-area .single-timeline-content {
+  position: relative;
+  z-index: 1;
+  padding: 30px 30px 25px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  box-shadow: 0 0.25rem 1rem 0 rgba(47, 91, 234, 0.125);
+  border: 1px solid #ebebeb;
+}
+@media only screen and (max-width: 575px) {
+  .single-timeline-area .single-timeline-content {
+      padding: 20px;
+  }
+}
+.single-timeline-area .single-timeline-content .timeline-icon {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  width: 30px;
+  height: 30px;
+  background-color: rgb(226, 127, 38);
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 30px;
+  flex: 0 0 30px;
+  text-align: center;
+  max-width: 30px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.single-timeline-area .single-timeline-content .timeline-icon i {
+  color: #ffffff;
+  line-height: 30px;
+}
+.single-timeline-area .single-timeline-content .timeline-text h6 {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+}
+.single-timeline-area .single-timeline-content .timeline-text p {
+  font-size: 13px;
+  margin-bottom: 0;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-icon,
+.single-timeline-area .single-timeline-content:focus .timeline-icon {
+  background-color: #020710;
+}
+.single-timeline-area .single-timeline-content:hover .timeline-text h6,
+.single-timeline-area .single-timeline-content:focus .timeline-text h6 {
+  color: #3f43fd;
+}
+
+/* Academia */
+
+.hori-timeline .events {
+  border-top: 3px solid #e9ecef;
+}
+.hori-timeline .events .event-list {
+  display: block;
+  position: relative;
+  text-align: center;
+  padding-top: 70px;
+  margin-right: 0;
+}
+.hori-timeline .events .event-list:before {
+  content: "";
+  position: absolute;
+  height: 36px;
+  border-right: 2px dashed #dee2e6;
+  top: 0;
+}
+.hori-timeline .events .event-list .event-date {
+  position:relative;
+  top: 38px;
+  left: 0;
+  right: 0;
+  width: 75px;
+  margin: 0 auto;
+  border-radius: 4px;
+  padding: 8px 4px;
+}
+@media (min-width: 1140px) {
+  .hori-timeline .events .event-list {
+      display: inline-block;
+      width: 24%;
+      padding-top: 45px;
+  }
+  .hori-timeline .events .event-list .event-date {
+      top: -12px;
+  }
+}
+.bg-soft-primary {
+  background-color: rgba(64,144,203,.3)!important;
+}
+.bg-soft-success {
+  background-color: rgba(71,189,154,.3)!important;
+}
+.bg-soft-danger {
+  background-color: rgba(231,76,94,.3)!important;
+}
+.bg-soft-warning {
+  background-color: rgba(249,213,112,.3)!important;
+}
+.card {
+  border: none;
+  margin-bottom: 24px;
+  -webkit-box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+  box-shadow: 0 0 13px 0 rgba(236,236,241,.44);
+}

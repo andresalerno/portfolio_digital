@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<main>
+  <div class="'container-fluid">
+    <div class="row">
+      <div class="col-lg-3">
+        <div>
+          <img src="{{url_for('static', filename='img/salerno.png')}}" id='img_my' alt="...">
+        </div>
+    </div>
+    <div class="col-xl-9" style="padding: 5%;">
+      <div>
+        <div id="terminal">
+          <!-- Terminal Bar -->       
+          <section id="terminal__bar">          
+            <div id="bar__buttons">            
+              <button class="bar__button" id="bar__button--exit">&#10005;</button>            
+              <button class="bar__button">&#9472;</button>                
+              <button class="bar__button">&#9723;</button>          
+            </div>          
+            <p id="bar__user">salerno@ubuntu: ~</p>        
+          </section>        
+          <!-- Terminal Body -->        
+          <section id="terminal__body">          
+            <div id="terminal__prompt">            
+              <span id="terminal__prompt--user">salerno@ubuntu:</span>            
+              <span id="terminal__prompt--location">~</span>            
+              <span class="typewriter">$ I'm coding to create a full stack solutions in the financial field, so a better financial manager</span>>
+              </span>            
+              <span id="terminal__prompt--cursor"></span>
+            </div>        
+          </section>      
+        </div>    
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="container-md">
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+{% endblock content %}
