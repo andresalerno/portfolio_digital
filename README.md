@@ -27,6 +27,9 @@
 <h3><bold>Execute a aplicação</bold></h3>
 <ol>
 <li>Certifique-se de ter o Python instalado em sua máquina</li>
+
+    python --version
+
 <li>Recomendo usar uma IDE (preferencialmente VSCODE)</li>
 <li>Crie um ambiente virtual usando o seguinte comando:</li>
 
