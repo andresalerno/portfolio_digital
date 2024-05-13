@@ -45,7 +45,7 @@
 
 <li>Instale as dependências:</li>
 
-    pip install requirements.txt
+    pip install -r requirements.txt
 
     obs.: este arquivo está dentro da pasta api
 
