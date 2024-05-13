@@ -35,6 +35,7 @@
     ./venv/Scripts/activate
 
 <li>Instale as dependências:</li>
+
     pip install requirements.txt
 
     obs.: certifique-se de estar no diretório correto para a execuação do código acima
@@ -43,7 +44,7 @@
 
 <li>Na pasta flask-app executar:</li>
     flask --app __init__ run --debug
-    
+
 <li>Clique no link que aparecerá no terminal e navegue pelo site</li>
 <li>Para finalizar, clique neste mesmo terminal o CTRL + C que encerrará esse procedimento localmente</li>
 </ol>
