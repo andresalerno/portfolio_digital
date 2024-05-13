@@ -29,9 +29,11 @@
 <li>Certifique-se de ter o Python instalado em sua máquina</li>
 <li>Recomendo usar uma IDE (preferencialmente VSCODE)</li>
 <li>Crie um ambiente virtual usando o seguinte comando:</li>
+
     python -m venv .venv
 
 <li>Ative esse ambiente:</li>
+
     ./venv/Scripts/activate
 
 <li>Instale as dependências:</li>
@@ -40,9 +42,11 @@
 
     obs.: certifique-se de estar no diretório correto para a execuação do código acima
 <li>Clone o projeto em sua máquina</li>
+
     git clone https://github.com/andresalerno/portfolio_digital.git
 
 <li>Na pasta flask-app executar:</li>
+
     flask --app __init__ run --debug
 
 <li>Clique no link que aparecerá no terminal e navegue pelo site</li>
