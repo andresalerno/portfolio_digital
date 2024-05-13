@@ -28,7 +28,6 @@
 <ol>
 <li>Certifique-se de ter o Python instalado em sua máquina</li>
 <li>Recomendo usar uma IDE (preferencialmente VSCODE)</li>
-<li>Certifique-se de ter o Python instalado em sua máquina</li>
 <li>Crie um ambiente virtual usando o seguinte comando:</li>
     python -m venv .venv
 <li>Ative esse ambiente:</li>
