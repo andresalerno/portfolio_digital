@@ -47,7 +47,7 @@
 
     pip install requirements.txt
 
-    obs.: certifique-se de estar no diretório correto para a execuação do código acima
+    obs.: este arquivo está dentro da pasta api
 
 <li>Na pasta flask-app executar:</li>
 
