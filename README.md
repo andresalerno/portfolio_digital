@@ -35,6 +35,10 @@
 
     python -m venv .venv
 
+<li>Clone o projeto em sua máquina</li>
+
+    git clone https://github.com/andresalerno/portfolio_digital.git
+
 <li>Ative esse ambiente:</li>
 
     ./venv/Scripts/activate
@@ -44,9 +48,6 @@
     pip install requirements.txt
 
     obs.: certifique-se de estar no diretório correto para a execuação do código acima
-<li>Clone o projeto em sua máquina</li>
-
-    git clone https://github.com/andresalerno/portfolio_digital.git
 
 <li>Na pasta flask-app executar:</li>
 
