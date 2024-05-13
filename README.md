@@ -37,7 +37,7 @@
 
 <li>Clone o projeto em sua máquina</li>
 
-    git clone https://github.com/andresalerno/portfolio_digital.git
+    git clone https://github.com/andresalerno/portfolio_digital.git .
 
 <li>Ative esse ambiente:</li>
 
