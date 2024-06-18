@@ -1,6 +1,15 @@
-from flask import Flask, render_template
+from flask import Flask, redirect, render_template, request, url_for
+from flask_mysqldb import MySQL
+import mysql.connector # type: ignore
 
 app = Flask(__name__)
+app.config['MYSQL_HOST'] = 'db'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = 'root'
+app.config['MYSQL_DB'] = 'contato'
+my_sql = MySQL(app)
+# Conexão com o banco de dados
+
 
 @app.route("/")
 def home():
@@ -25,3 +34,54 @@ def tecnologias():
 @app.route("/links")
 def links():
     return render_template('links.html')
+
+# Rota para processar o formulário de cadastro
+@app.route('/links', methods=['POST'])
+def cadastrar():
+    print("Test!")
+    nome = request.form['nome']
+    sobrenome = request.form['sobrenome']
+    data_nasc = request.form['data_nasc']
+    endereco = request.form['endereco']
+    cidade = request.form['cidade']
+    estado = request.form['estado']
+    email = request.form['email']
+    db_config = mysql.connector.connect(
+        user= 'root',
+        password= 'root',
+        host= 'db',
+        database= 'contato'
+    )
+    print(db_config.is_connected())
+    print(nome, sobrenome, data_nasc, endereco, cidade, estado, email)
+    
+   
+
+    # Inserir os dados no banco de dados
+    sql = "INSERT INTO signup (nome, sobrenome, data_nasc, endereco, cidade, estado, email) VALUES (%s, %s, %s, %s, %s, %s, %s)"
+    val = (nome, sobrenome, data_nasc, endereco, cidade, estado, email)
+    cursor = db_config.cursor()
+    cursor.execute(sql, val)
+    db_config.commit()
+    cursor.close()
+    
+    
+    # but a test
+    cur = my_sql.connection.cursor()
+    cur.execute("SELECT * FROM signup")
+    signup = cur.fetchall()
+    cur.close()
+    return render_template('links.html', signup=signup)
+    
+    
+    return redirect(url_for('links'))
+
+
+# Rota para exibir a lista de tarefas
+@app.route('/signup')
+def listar():
+    cur = mysql.connection.cursor()
+    cur.execute("SELECT * FROM signup")
+    signup = cur.fetchall()
+    cur.close()
+    return render_template('links.html', signup=signup)

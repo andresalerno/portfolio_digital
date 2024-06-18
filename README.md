@@ -58,3 +58,7 @@
 </ol>
 </div>
 Validação  OK - Fabrício Galende Marques de Carvalho 2024/01
+
+```bash
+docker compose down; docker rmi app-flask:3.0 -f; docker build -t app-flask:3.0 .\api\flask-app; docker-compose up
+```
