@@ -1,5 +1,0 @@
-{
-    "rewrites": [
-        { "source": "/(.*)", "destination": "/flask-app/__init__" }
-    ]
-}

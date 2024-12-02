@@ -82,11 +82,11 @@ def links():
 # # Rota para exibir a lista de tarefas
 # @app.route('/signup')
 # def listar():
-    cur = mysql.connection.cursor()
-    cur.execute("SELECT * FROM signup")
-    signup = cur.fetchall()
-    cur.close()
-    return render_template('links.html', signup=signup)
+    # cur = mysql.connection.cursor()
+    # cur.execute("SELECT * FROM signup")
+    # signup = cur.fetchall()
+    # cur.close()
+    # return render_template('links.html', signup=signup)
 
 # Rota para detalhes projetos
 

@@ -313,7 +313,7 @@ body {
 }
 
 #img_my {
-  width: 200px;
+  width: 150px;
   height: 200px;
   object-fit: cover;
   display: block;
@@ -330,6 +330,8 @@ body {
 #img_my:hover {
   transform: scale(1.1);
 }
+
+
 
 /* Animações */
 @keyframes typing {
