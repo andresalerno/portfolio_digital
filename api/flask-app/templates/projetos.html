@@ -2,52 +2,54 @@
 
 {% block content %}
 <main>
-    <div class="container-md">
-        <div class="container-md">
-            <h1>Projetos</h1>
-        </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' class='filter-orange'/>
-                <div class="card-body">
-                  <p class="card-text">Web based project called Portfólio Digital at FATEC-SJC and oriented by Prof Fabrício</p>
-                </div>
-                <a href="https://github.com/andresalerno/portfolio_digital" class="btn btn-primary" target="_blank">Conheça mais</a>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' class='filter-orange'/>
-                <div class="card-body">
-                  <p class="card-text">{{projetos.0}}</p>
-                </div>
-                <a href="https://github.com/andresalerno/projeto_api" class="btn btn-primary" target="_blank">Conheça mais</a>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-            <div class="card-body">
-                <p class="card-text">{{projetos.1}}</p>
-            </div>
-            <a href="https://www.linkedin.com/in/andresalerno/" class="btn btn-primary" target="_blank">Acesse projetos</a>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-            <div class="card-body">
-                <p class="card-text">{{projetos.2}}</p>
-            </div>
-            <a href="https://www.linkedin.com/in/andresalerno/" class="btn btn-primary" target="_blank">Acesse projetos</a>
-            </div>
-
-
-
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-center" style="color: rgb(226, 127, 38);">Projetos</h1>
+            <p class="text-secondary">Principais projetos já desenvolvidos</p>
         </div>
 
-
-
-
-
-
+        <!-- Grid Responsivo -->
+        <div class="row d-flex justify-content-center flex-wrap">
+            <!-- Projetos dinâmicos -->
+            {% for project, desc, link, icon in [
+                ("Portfólio Digital", 
+                 "Web based project called Portfólio Digital at FATEC-SJC and oriented by Prof Fabrício.", 
+                 "https://github.com/andresalerno/portfolio_digital", 
+                 "github/github-original.svg"),
+                ("Projeto API", 
+                 "Developed an API solution integrating multiple services. The last one was a project on stock management system using a complete full-stack with TS, React and MySQL", 
+                 "https://github.com/SkyFlyTeam/cloudStock", 
+                 "github/github-original.svg"),
+                ("Projeto LinkedIn", 
+                 "Showcasing professional experiences and achievements on LinkedIn.", 
+                 "https://www.linkedin.com/in/andresalerno/", 
+                 "linkedin/linkedin-original.svg"),
+                ("Smart Farm", 
+                 "A full-stack solution in the agriculture field called Smart Farm.", 
+                 "https://github.com/SkyFlyTeam/SmartFarm", 
+                 "github/github-original.svg"),
+                ("Gerenciamento de Clientes, Compras e Fornecedores", 
+                 "Developed a system for client and supplier management in web applications.", 
+                 "https://github.com/andresalerno/desenv_web_AA4.git", 
+                 "github/github-original.svg")
+            ] %}
+            <div class="col-12 col-md-auto">
+                <div class="card h-100 border-0 shadow-sm" style="width: 18rem;">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ icon }}" 
+                         class="card-img-top mx-auto d-block" 
+                         alt="{{ project }} Icon" 
+                         style="height: 150px; width: auto; object-fit: contain;">
+                    <div class="card-body" style="color: #6c757d;">
+                        <h5 class="card-title text-center fw-bold" style="color: #E27F26;">{{ project }}</h5>
+                        <p class="card-text small">{{ desc }}</p>
+                        <div class="text-center">
+                            <a href="{{ link }}" class="btn btn-sm" target="_blank" style="background-color: #E27F26; color: white; border: none;">Conheça mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </main>
 {% endblock content %}

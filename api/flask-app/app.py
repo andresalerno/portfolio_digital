@@ -36,6 +36,7 @@ def tecnologias():
 def links():
     return render_template('links.html')
 
+
 # Rota para processar o formulário de cadastro
 # @app.route('/links', methods=['POST'])
 # def cadastrar():
@@ -88,4 +89,8 @@ def links():
     return render_template('links.html', signup=signup)
 
 # Rota para detalhes projetos
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
 

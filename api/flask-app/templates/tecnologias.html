@@ -2,50 +2,82 @@
 
 {% block content %}
 <main>
-    <div class="container-md">
-        <div class="container-md">
-            <h1>Tecnologias</h1>
-        </div>
-        <div class="row">
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
-                <div class="card-body">
-                  <p class="card-text">A Amazon Web Services (AWS) é a plataforma de nuvem mais adotada e mais abrangente do mundo, oferecendo mais de 200 serviços completos de datacenters em todo o mundo.</p>
-                </div>
-                <a href="https://aws.amazon.com/pt/what-is-aws/" class="btn btn-primary" target="_blank">Conheça mais</a>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" />
-            <div class="card-body">
-                <p class="card-text">Designed and built with all the love in the world by the Bootstrap team with the help of our contributors.</p>
-            </div>
-            <a href="https://getbootstrap.com/" class="btn btn-primary" target="_blank">Conheça mais</a>
-            </div>
-
-            <div class="card" style="width: 18rem;">
-              <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg' class='filter-orange'/>
-                <div class="card-body">
-                    <p class="card-text">Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.</p>
-                </div>
-                <a href="https://flask.palletsprojects.com/en/3.0.x/" class="btn btn-primary" target="_blank">Conheça mais</a>
-                </div>
-
-                <div class="card" style="width: 18rem;">
-                    <img src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg' class='filter-orange'/>
-                    <div class="card-body">
-                        <p class="card-text">GitHub is a web-based interface that uses Git, the open source version control software that lets multiple people make separate changes to web pages at the same time.</p>
-                    </div>
-                    <a href="https://github.com/" class="btn btn-primary" target="_blank">Conheça mais</a>
-                    </div>
+    <div class="container py-5">
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-center" style="color: rgb(226, 127, 38);">Tecnologias</h1>
+            <p class="text-secondary">Principais tecnologias e ferramentas que utilizo em meus projetos.</p>
         </div>
 
-
-
-
-
-
+        <!-- Grid Responsivo -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <!-- Tecnologias dinâmicas -->
+            {% for tech, icon, desc, link in [
+                ("AWS", "amazonwebservices/amazonwebservices-original-wordmark.svg", 
+                 "A Amazon Web Services (AWS) é a plataforma de nuvem mais adotada e abrangente do mundo.", 
+                 "https://aws.amazon.com/pt/what-is-aws/"),
+                ("Bootstrap", "bootstrap/bootstrap-original.svg", 
+                 "Designed and built with all the love in the world by the Bootstrap team.", 
+                 "https://getbootstrap.com/"),
+                ("Flask", "flask/flask-original.svg", 
+                 "Flask is a micro web framework written in Python.", 
+                 "https://flask.palletsprojects.com/en/3.0.x/"),
+                ("GitHub", "github/github-original.svg", 
+                 "GitHub is a web-based interface for version control.", 
+                 "https://github.com/"),
+                ("VSCode", "vscode/vscode-original.svg", 
+                 "Visual Studio Code is a lightweight but powerful code editor.", 
+                 "https://code.visualstudio.com/"),
+                ("JavaScript", "javascript/javascript-original.svg", 
+                 "JavaScript is a versatile language for building interactive web applications.", 
+                 "https://developer.mozilla.org/en-US/docs/Web/JavaScript"),
+                ("TypeScript", "typescript/typescript-original.svg", 
+                 "TypeScript adds static typing to JavaScript for scalable development.", 
+                 "https://www.typescriptlang.org/"),
+                ("Java", "java/java-original.svg", 
+                 "Java is a robust programming language widely used in backend development.", 
+                 "https://www.java.com/"),
+                ("MySQL", "mysql/mysql-original-wordmark.svg", 
+                 "MySQL is a popular open-source relational database management system.", 
+                 "https://www.mysql.com/"),
+                ("Docker", "docker/docker-original.svg", 
+                 "Docker simplifies development by isolating applications in containers.", 
+                 "https://www.docker.com/"),
+                ("HTML", "html5/html5-original.svg", 
+                 "HTML is the standard markup language for creating web pages.", 
+                 "https://developer.mozilla.org/en-US/docs/Web/HTML"),
+                ("CSS", "css3/css3-original.svg", 
+                 "CSS is a style sheet language used to design beautiful websites.", 
+                 "https://developer.mozilla.org/en-US/docs/Web/CSS"),
+                ("PostgreSQL", "postgresql/postgresql-original-wordmark.svg", 
+                 "PostgreSQL is a powerful open-source object-relational database system.", 
+                 "https://www.postgresql.org/"),
+                ("Figma", "figma/figma-original.svg", 
+                 "Figma is a design tool for creating user interfaces and prototypes.", 
+                 "https://www.figma.com/"),
+                ("Python", "python/python-original.svg", 
+                 "Python is a powerful programming language known for its simplicity and versatility.", 
+                 "https://www.python.org/"),
+                ("R Programming", "r/r-original.svg", 
+                 "R is a programming language and software environment for statistical computing.", 
+                 "https://www.r-project.org/")
+            ] %}
+            <div class="col">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/{{ icon }}" 
+                         class="card-img-top mx-auto d-block" 
+                         alt="{{ tech }} Icon" 
+                         style="height: 150px; width: auto; object-fit: contain;">
+                    <div class="card-body" style="color: #6c757d;">
+                        <h5 class="card-title text-center fw-bold" style="color: #E27F26;">{{ tech }}</h5>
+                        <p class="card-text small">{{ desc }}</p>
+                        <div class="text-center">
+                            <a href="{{ link }}" class="btn btn-sm" target="_blank" style="background-color: #E27F26; color: white; border: none;">Conheça mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </main>
-
 {% endblock content %}
